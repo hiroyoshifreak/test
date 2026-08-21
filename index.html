@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英語科 学習ページ</title>
+    <style>
+        :root {
+            /* メインカラー：さわやかなミントブルー */
+            --primary-color: #48bcae;
+            --primary-light: #e0f5f3;
+            /* アクセントカラー：元気なオレンジ */
+            --accent-color: #ff9f1c;
+            --text-main: #555555;
+            --text-muted: #888888;
+            /* 背景色：あたたかみのあるクリーム色 */
+            --bg-body: #fcf9f2;
+            --bg-card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* 丸みのあるフォント（丸ゴシック）を優先指定してかわいい印象に */
+            font-family: "Hiragino Maru Gothic ProN", "ヒラギノ丸ゴ ProN W4", "Quicksand", "Meiryo", sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            line-height: 1.7;
+            font-size: 16px; 
+            padding: 15px 10px;
+        }
+
+        .container {
+            max-width: 600px; /* スマホ向けに少し幅を絞る */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* 各要素の間の余白 */
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 4px 0 #3a9c90; /* ぷっくりした立体感 */
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .announcement {
+            background-color: #fff8d6;
+            border: 2px dashed #ffc107;
+            padding: 20px;
+            border-radius: 15px;
+            color: #665b30;
+        }
+
+        .announcement h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            color: #d49a00;
+        }
+
+        .announcement h2::before {
+            content: "📢";
+            margin-right: 8px;
+            font-size: 1.4rem;
+        }
+
+        .unit-section {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 25px 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            position: relative;
+        }
+
+        .unit-title {
+            font-size: 1.3rem;
+            color: white;
+            background-color: var(--primary-color);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .points-list {
+            list-style-type: none; /* デフォルトの黒丸を消す */
+            margin-bottom: 20px;
+        }
+
+        .points-list li {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            text-indent: -28px; /* 複数行になった時のインデント調整 */
+        }
+
+        /* リストの先頭にチェックマークアイコンをつける */
+        .points-list li::before {
+            content: "✨";
+            margin-right: 6px;
+            display: inline-block;
+        }
+
+        .links-area {
+            background-color: var(--primary-light);
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .links-title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* ボタン同士の隙間 */
+        }
+
+        /* リンクを押しやすいボタン風にする */
+        .links-list a {
+            display: block;
+            padding: 14px;
+            background-color: white;
+            border: 2px solid var(--primary-color);
+            border-radius: 12px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        /* ボタンのホバー（タップ）アクション */
+        .links-list a:hover, .links-list a:active {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(72, 188, 174, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 英語科 学習ページ 🌟</h1>
+        </header>
+
+        <section class="announcement">
+            <h2>お知らせ</h2>
+            <p>ここにお知らせを書きます。（例：期末テストの範囲、提出物の締め切りなど）</p>
+        </section>
+
+        <section class="unit-section">
+            <h2 class="unit-title">📖 単元：５文型</h2>
+            <ul class="points-list">
+                <li>英語の文は、動詞の種類によって5つのパターンに分けられます。</li>
+                <li>S(主語), V(動詞), O(目的語), C(補語)の働きを理解しましょう。</li>
+                <li>特に第4文型(SVOO)と第5文型(SVOC)の形と意味をしっかり覚えましょう。</li>
+            </ul>
+            <div class="links-area">
+                <p class="links-title">👇 学習メニュー 👇</p>
+                <ul class="links-list">
+                    <li><a href="#">▶️ 【解説動画】５文型の見分け方</a></li>
+                    <li><a href="#">📝 【確認ドリル】文型判定クイズ</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="unit-section">
+            <h2 class="unit-title">📖 単元：仮定法</h2>
+            <ul class="points-list">
+                <li>「もし〜なら…だろうに」と、現実とは違うことを想像して言う表現です。</li>
+                <li>現在のことについて想像する時は、動詞を「過去形」にします（仮定法過去）。</li>
+                <li>「I wish ＋ 過去形」で「〜ならいいのになあ」という願望を表せます。</li>
+            </ul>
+            <div class="links-area">
+                <p class="links-title">👇 学習メニュー 👇</p>
+                <ul class="links-list">
+                    <li><a href="#">📄 【解説プリント】仮定法の基本と公式</a></li>
+                    <li><a href="#">✏️ 【練習問題】I wish を使った文作り</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="unit-section">
+            <h2 class="unit-title">📖 単元：関係代名詞</h2>
+            <ul class="points-list">
+                <li>名詞（先行詞）を、後ろから文で詳しく説明するための接着剤の役割をします。</li>
+                <li>先行詞が「人」なら who, 「モノ・動物」なら which, どちらにも使える that を覚えます。</li>
+                <li>主格（〜が）と目的格（〜を・〜に）で、関係代名詞の働きが変わることに注意しましょう。</li>
+            </ul>
+            <div class="links-area">
+                <p class="links-title">👇 学習メニュー 👇</p>
+                <ul class="links-list">
+                    <li><a href="#">📓 【まとめノート】使い分け</a></li>
+                    <li><a href="#">🎧 【音声教材】会話例を聞く</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>※ このページは授業用です。</p>
+        </footer>
+    </div>
+</body>
+</html>
